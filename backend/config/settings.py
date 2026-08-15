@@ -136,7 +136,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 # Configuração do Django REST Framework
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAdminOrReadOnly',
+        'loja.permissions.IsAdminOrReadOnly',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
