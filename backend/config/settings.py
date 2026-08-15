@@ -132,3 +132,14 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Permite acesso de qualquer front-end (libera CORS)
 CORS_ALLOW_ALL_ORIGINS = True
+
+# Configuração do Django REST Framework
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAdminOrReadOnly',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ],
+}

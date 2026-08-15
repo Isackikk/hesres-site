@@ -24,13 +24,18 @@ class CategoriaDetailView(generics.RetrieveUpdateDestroyAPIView):
 
 # ------------------------------------------------------------
 # API DE PRODUTOS
-# GET /api/produtos/          → Lista todos os produtos ativos
+# GET /api/produtos/          → Lista produtos (admin vê todos, cliente só ativos)
 # GET /api/produtos/<id>/     → Mostra um produto específico
 # ------------------------------------------------------------
 class ProdutoListCreate(generics.ListCreateAPIView):
-    # Só mostra produtos ativos (visíveis no site)
-    queryset = Produto.objects.filter(ativo=True)
     serializer_class = ProdutoSerializer
+
+    def get_queryset(self):
+        # Se for admin logado → mostra TODOS os produtos (inclusive inativos)
+        if self.request.user.is_staff:
+            return Produto.objects.all()
+        # Se for cliente comum → só mostra produtos ativos
+        return Produto.objects.filter(ativo=True)
 
 class ProdutoDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Produto.objects.all()
