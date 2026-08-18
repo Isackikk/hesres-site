@@ -4,54 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produto</title>
-    <link rel="stylesheet" href="home.html">
-    <link rel="stylesheet" href="produtos.html">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+
+<!-- HEADER / BARRA DE NAVEGAÇÃO -->
 <header>
     <div class="header-container">
+        <!-- Logo do site -->
+        <a href="home.html" class="logo">HES<span>Atacado</span></a>
 
         <nav>
-            
-        <a href="#contato">Contato</a>
-        <a href="serviços.html">Serviços</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="home.html">Home</a>
-        <!--Ancoras do site-->
-
+            <!-- Ancoras do site -->
+            <a href="home.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="home.html#contato">Contato</a>
         </nav>
 
-        <a href="login.html" class="btn-admin" >Admin</a>
-        <!--Botão de admin-->
-
+        <!-- Botão de admin -->
+        <a href="login.html" class="btn-admin">Admin</a>
     </div>
-</header> 
-<!--detalhes do produto-->
+</header>
 
+<!-- DETALHES DO PRODUTO -->
 <section class="produto-detalhes">
-    <div class="produto-detalhe">
-        <div class="container">
-            <a href="produtos.html" class="voltar">Voltar para produtos</a>
-            <div class="produto-grid">
+    <div class="container">
+        <!-- Botão de voltar para a listagem -->
+        <a href="produtos.html" class="voltar">← Voltar para produtos</a>
 
-            </div>
+        <!-- Grid do produto (imagem + informações) -->
+        <div class="produto-grid" id="produto-container">
+            <!-- Carregado pelo JavaScript -->
+
             <div class="produto-loading">
                 <p>Carregando detalhes do produto...</p>
-
             </div>
         </div>
     </div>
 </section>
+
+<!-- RODAPÉ -->
 <footer>
     <div class="footer-container">
-        <p class="footer-logo">Hesres<span>Atacado</span></p>
-        <p>&copy; 2026 Minha Empresa. Todos os direitos reservados.</p>
+        <p class="footer-logo">HES<span>Atacado</span></p>
+        <p class="footer-copy">© 2026 HES Atacado. Todos os direitos reservados.</p>
     </div>
 </footer>
 
-    <script src="js/api.js"></script>
-    <script src="js/produto.js"></script>
+<!-- Scripts -->
+<script src="js/api.js"></script>
+<script src="js/produto.js"></script>
 
 </body>
 </html>

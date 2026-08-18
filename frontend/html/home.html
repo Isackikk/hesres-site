@@ -4,100 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>HES</h1> 
 
+<!-- HEADER / BARRA DE NAVEGAÇÃO -->
 <header>
-    <div class="containers">
-
+    <div class="header-container">
+        <!-- Logo do site -->
+        <a href="home.html" class="logo">HES<span>Atacado</span></a>
+        
         <nav>
-            
-        <a href="#contato">Contato</a>
-        <a href="serviços.html">Serviços</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="home.html">Home</a>
-        <!--Ancoras do site-->
-
+            <!-- Ancoras do site -->
+            <a href="home.html" class="active">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="#contato">Contato</a>
         </nav>
 
-        <a href="login.html" class="btn-admin" >Admin</a>
-        <!--Botão de admin-->
-
+        <!-- Botão de admin -->
+        <a href="login.html" class="btn-admin">Admin</a>
     </div>
-</header> 
+</header>
 
+<!-- SEÇÃO SOBRE NÓS -->
 <section class="capa">
     <div class="capa-content">
-
         <h2>Sobre nós</h2>
         <p>Coloque aqui o texto falando um pouco sobre</p>
         <p>Coloque aqui tambem para não se perder</p>
-        <!--Sobre a empresa-->
-        
+        <!-- Sobre a empresa -->
     </div>
-
 </section>
 
-<section class="localização">
+<!-- SEÇÃO LOCALIZAÇÃO -->
+<section class="localizacao">
     <div class="capa-content">
-        <h2>localização</h2>
-        <div class="localização-grid">
-            <div class="localização-info"> 
-                <p><Strong>Endereço</Strong></p>
+        <h2>Localização</h2>
+        <div class="localizacao-grid">
+            <div class="localizacao-info">
+                <p><strong>Endereço</strong></p>
                 <p>Avenida Josadark Alves de França</p>
                 <p>Número 44</p>
                 <p>Cep: 54767620</p>
             </div>
-            <div class="localização-mapa">
+            <div class="localizacao-mapa">
                 <!-- Mapa -->
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-<section class="contato" id=contato>
+<!-- SEÇÃO CONTATO -->
+<section class="contato" id="contato">
     <div class="capa-content">
-        <div class="conato-grid">
-
+        <div class="contato-grid">
             <div class="contato-card">
                 <h3>Telefone</h3>
                 <p>12346789</p>
-            <!-- Informações de contato -->
+                <!-- Informações de contato -->
             </div>
 
             <div class="contato-card">
-                <h3>Whatsapp</h3>
+                <h3>WhatsApp</h3>
                 <p>98764321</p>
+                <!-- WhatsApp para orçamentos -->
+            </div>
 
-        </div>
-
-        <div class="contato-card">
+            <div class="contato-card">
                 <h3>Horários de funcionamento</h3>
-                <p>Segunda a Sexta:8h a 20h</p>
-                <p>Sábado e Domingo fechados </p>
+                <p>Segunda a Sexta: 8h a 20h</p>
+                <p>Sábado e Domingo fechados</p>
                 <!-- Horários de funcionamento -->
+            </div>
+        </div>
     </div>
-
 </section>
-<footer>
-<div class="footer-container">
-    <p class="footer-logo">HES <span>Atacado</span> </p>
-    <p>Distribuição de produtos de limpeza</p>
-    <p class="footer-copy">©2026 HES. Todos os direitos reservados</p>
 
-</div>
+<!-- RODAPÉ -->
+<footer>
+    <div class="footer-container">
+        <p class="footer-logo">HES<span>Atacado</span></p>
+        <p>Distribuição de produtos de limpeza</p>
+        <p class="footer-copy">© 2026 HES. Todos os direitos reservados</p>
+    </div>
 </footer>
 
-    
-    <script src="js/api.js"></script>
-    <script src="js/home.js"></script>
-    <!-- Scripts -->
+<!-- Scripts -->
+<script src="js/api.js"></script>
+<script src="js/home.js"></script>
 
 </body>
 </html>
-

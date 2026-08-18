@@ -4,75 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
-    <link rel="stylesheet" href="home.html">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-   <header>
+
+<!-- HEADER / BARRA DE NAVEGAÇÃO -->
+<header>
     <div class="header-container">
-        <a href="home.html" class="logo"></a>
+        <!-- Logo do site -->
+        <a href="home.html" class="logo">HES<span>Atacado</span></a>
 
-         <nav>
-
-        <a href="#contato">Contato</a>
-        <a href="serviços.html">Serviços</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="home.html">Home</a>
-        <!--Ancoras do site-->
-
+        <nav>
+            <!-- Ancoras do site -->
+            <a href="home.html">Home</a>
+            <a href="produtos.html" class="active">Produtos</a>
+            <a href="home.html#contato">Contato</a>
         </nav>
 
-        <a href="login.html" class="btn-admin" >Admin</a>
-        <!--Botão de admin-->
-
-        
-
+        <!-- Botão de admin -->
+        <a href="login.html" class="btn-admin">Admin</a>
     </div>
-   </header>
+</header>
 
-   <section class="Capa">
+<!-- TÍTULO DA PÁGINA -->
+<section class="capa">
     <div class="capa-content">
         <h1>Produtos</h1>
         <p>Conheça nossa linha completa de produtos</p>
         <!-- Descrição dos produtos -->
-
     </div>
-   </section>
+</section>
 
-   
-    <!-- FILTROS POR CATEGORIA -->
-    <section class="filtros">
-        <div class="container">
-            <div id="lista-categorias-filtro" class="categorias-filtro">
-                <button class="btn-filtro active" onclick="filtrarProdutos('all')">
-                    Todos
-                </button>
-                <!-- As categorias vão ser carregadas pelo JavaScript -->
-            </div>
+<!-- FILTROS POR CATEGORIA -->
+<section class="filtros">
+    <div class="container">
+        <div id="lista-categorias-filtro" class="categorias-filtro">
+            <!-- Botão "Todos" sempre visível -->
+            <button class="btn-filtro active" onclick="filtrarProdutos('all')">
+                Todos
+            </button>
+            <!-- As categorias vão ser carregadas pelo JavaScript -->
         </div>
-    </section>
+    </div>
+</section>
 
-     <!-- LISTAGEM DE PRODUTOS -->
-    <section class="produtos-lista">
-        <div class="container">
-            <div class="produtos-grid" id="produtos-grid">
-                <!-- Produtos carregados pelo JavaScript -->
-            </div>
+<!-- LISTAGEM DE PRODUTOS -->
+<section class="produtos-lista">
+    <div class="container">
+        <div class="produtos-grid" id="produtos-grid">
+            <!-- Produtos carregados pelo JavaScript -->
         </div>
-    </section>
-    <footer>
-        <div class="footer-container">
-            <p class="footer-logo">HES <span>Atacado</span></p>
-            <p>Distribuição de produtos de limpeza</p>
-            <p>&copy; 2026 HES. Todos os direitos reservados.</p>
-        </div>
+    </div>
+</section>
 
-    </footer>
-       
-    <script src="js/api.js"></script>
-    <script src="js/produtos.js"></script>
-    <!-- Scripts -->
+<!-- RODAPÉ -->
+<footer>
+    <div class="footer-container">
+        <p class="footer-logo">HES<span>Atacado</span></p>
+        <p>Distribuição de produtos de limpeza</p>
+        <p class="footer-copy">© 2026 HES. Todos os direitos reservados.</p>
+    </div>
+</footer>
 
+<!-- Scripts -->
+<script src="js/api.js"></script>
+<script src="js/produtos.js"></script>
 
 </body>
 </html>
