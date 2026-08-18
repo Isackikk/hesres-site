@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="home.html">
+    <link rel="stylesheet" href="produtos.html">
+    
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="home.html" class="logo"></a>
+
+             <nav>
+
+            <a href="admin.html" class="active">Admin</a>
+            <a href="#categorias-section">Categorias</a>
+        
+            </nav>
+
+            <button class="btn-logout" onclick="logout()">Sair</button>
+
+        </div>
+       </header>
+       <!--Título-->
+       <section class="Page título">
+        <div class="container">
+            <h1>Painel administrativo</h1>
+            <p>Bem-vindo à área administrativa. Aqui você pode gerenciar produtos e categorias.</p>
+        </div>
+         </section>
+         <section class="admin-acoes">
+            <div class="container">
+                <div class="admin-acoes-grid">
+
+                    <button class="btn-admin-acao" onclick="abrirFormProduto()">
+                        ➕Gerenciar Produtos
+
+                    </button>
+
+                    <button class="btn-admin-acao" onclick="abrirFormProduto()">
+                        ➕Gerenciar Produtos
+
+                    </button>
+
+                   
+
+                </div>
+                
+            </div>  
+         </section>
+
+         <!--Formulário para cadastro produtos-->
+         <section class="form-produto" id="form-produto">
+            <div class="container">
+                <div class="form-card">
+                    <h2 id="form-produto-título">Cadastrar Produtos</h2>
+                    <form id=produtos>
+                        <input type="hidden" id="produto-id">
+                            
+                            <div class="form-group">
+
+                                <label for="produto-nome">Nome do Produto:</label>
+                                <input type="text" id="produto-nome" required>
+
+                            </div>
+                            <div class="form-group">
+
+                                <label for="produto-imagem">URL da imagem:</label>
+                                <input type="text" id="produto-imagem" required placeholder="Cole a URL da imagem aqui">
+
+                            </div>
+                            <div class="form-group">
+
+                                <label for="produto-estoque">Estoque:</label>
+                                <input type="number" id="produto-estoque" value="0">
+
+                            </div>
+                            <div class="form-group">
+
+                                <label>
+                                   <input type="Checkbox" id="produto-ativo" checked> 
+                                   Produtos ativos (visíveis no site)
+                                </label> 
+                                
+
+                            </div>
+                            <div class="form-botoes">
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                                <button type="button" class="btn btn-secondary" onclick="fecharFormProduto()">Cancelar</button>
+                            </div>
+
+                    </form>
+                </div>
+            </div>
+       </section>
+       <!---Lista de produtos-->
+       <section class="admin-lista">
+            <div class="container"> 
+                <h2>Produtos cadastrados</h2>
+                <div class="admin-table-wrap">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Categoria</th>
+                                <th>Estoque</th>
+                                <th>Ações</th>
+                                <th>Estatus</th>
+                            </tr>
+                        </thead>
+                        <tbody id="produtos-tabela">
+                            <!--Carregados pelo JavaScript-->
+                        </tbody>
+                    </table>
+                </div>
+       </section>
+       <!--Form cadastro categorias-->
+       <section class="form-categoria" id="form-categoria-section" style="display: none;" id="categorias-section">
+        <div class="container">
+            <div class="form-card">
+                <h2>Cadastrar Categoria</h2>
+                <form id="form-categoria">
+                    <div class="form-group">
+                        <label for="categoria-nome">Nome da Categoria *</label>
+                        <input type="text" id="categoria-nome" required>
+                    </div>
+                    <div class="form-botoes">
+                        <button type="submit" class="btn-salvar">Salvar</button>
+                        <button type="button" class="btn-cancelar" onclick="fecharFormCategoria()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lista de Categorias -->
+    <section class="admin-lista" id="categorias-section">
+        <div class="container">
+            <h2>Categorias Cadastradas</h2>
+            <div class="admin-table-wrap">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-categorias">
+                        <!-- Carregado pelo JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <p class="footer-logo">Hesres<span>Atacado</span></p>
+            <p class="footer-copy">© 2026 Hesres Atacado. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/admin.js"></script>
+
+</body>
+</html>
