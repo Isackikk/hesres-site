@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin - HES Atacado</title>
+    <!-- CSS principal do site -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER / BARRA DE NAVEGAÇÃO -->
+<header>
+    <div class="header-container">
+        <!-- Logo do site -->
+        <a href="home.html" class="logo">HES<span>Atacado</span></a>
+        <nav>
+            <!-- Ancoras do site -->
+            <a href="home.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="home.html#contato">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ÁREA DE LOGIN -->
+<section class="login-area">
+    <div class="login-box">
+        <h2>Painel Administrativo</h2>
+        <p class="login-subtitle">Faça login para gerenciar os produtos</p>
+
+        <!-- Formulário de login do admin -->
+        <form id="form-login">
+            <div class="form-group">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            </div>
+
+            <!-- Mensagem de erro (oculta por padrão) -->
+            <div id="login-erro" class="login-erro" style="display: none;">
+                Usuário ou senha incorretos.
+            </div>
+
+            <!-- Botão de entrar -->
+            <button type="submit" class="btn-login">Entrar</button>
+        </form>
+
+        <!-- Link para voltar para o site -->
+        <a href="home.html" class="voltar-home">← Voltar para o site</a>
+    </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+    <div class="footer-container">
+        <p class="footer-logo">HES<span>Atacado</span></p>
+        <p class="footer-copy">© 2026 HES Atacado. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/api.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>
