@@ -30,11 +30,33 @@
 
    <section class="Capa">
     <div class="capa-content">
-        
-
+        <h1>Produtos</h1>
+        <p>Conheça nossa linha completa de produtos</p>
     </div>
-
    </section>
+
+   
+    <!-- FILTROS POR CATEGORIA -->
+    <section class="filtros">
+        <div class="container">
+            <div id="lista-categorias-filtro" class="categorias-filtro">
+                <button class="btn-filtro active" onclick="filtrarProdutos('all')">
+                    Todos
+                </button>
+                <!-- As categorias vão ser carregadas pelo JavaScript -->
+            </div>
+        </div>
+    </section>
+
+     <!-- LISTAGEM DE PRODUTOS -->
+    <section class="produtos-lista">
+        <div class="container">
+            <div class="produtos-grid" id="produtos-grid">
+                <!-- Produtos carregados pelo JavaScript -->
+            </div>
+        </div>
+    </section>
+
 
 </body>
 </html>
